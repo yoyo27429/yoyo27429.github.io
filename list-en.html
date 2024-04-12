@@ -18,22 +18,50 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/en.css" rel="stylesheet">
+    <script>
+        (function (m, a, z, e) {
+            var s, t;
+            try {
+                t = m.sessionStorage.getItem('maze-us');
+            } catch (err) { }
+
+            if (!t) {
+                t = new Date().getTime();
+                try {
+                    m.sessionStorage.setItem('maze-us', t);
+                } catch (err) { }
+            }
+
+            s = a.createElement('script');
+            s.src = z + '?apiKey=' + e;
+            s.async = true;
+            a.getElementsByTagName('head')[0].appendChild(s);
+            m.mazeUniversalSnippetApiKey = e;
+        })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '4ceff9ab-59dd-4fc6-969c-c5df87f98b8c');
+    </script>
 </head>
 
 <body>
-    <div class="sik-fix-contact"><a href=""><img src="images/fix-contact-icon.png"></a><a href="javascript:" class="back-to-top"><img src="images/back-top.png"></a></div>
+    <div class="sik-fix-contact"><a href=""><img src="images/fix-contact-icon.png"></a><a href="javascript:"
+            class="back-to-top"><img src="images/back-top.png"></a></div>
     <div id="wrapper">
         <header>
             <div class="flex">
                 <div class="col">
-                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="新光人壽"><span>｜會員專區</span></a></div>
+                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="新光人壽"><span>｜會員專區</span></a>
+                    </div>
                 </div>
-                <div class="col-2"><a href="javascript:void(0);" id="menu-notify" class="animate__animated animate__animated animate__headShake"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHrSURBVHgB7ZjRccIwDECVXv/bEbxBYYOMwAjZoGwAG7QbkA3aDVImgE4QNggbqPLZuTrGTeRgJ9Dzu/OdDyRLshXFEUAi4QQRcxoVjQYVcl7APUCObvBvNjAV2pF3GsJDp8BhcogNGVkbBg8eehUjgApiQ0ZK06KHHoemlX+AeDxbjj0z9c4MGe5afKSDqPK3wt/KYXNA9VyInnUqHCZsCmnHG/TjzXUqqMrnEAWEANWu73A8NTpOg37b9uhsIQTa+aPDQIXqRIQlK3e21E6byJNbONZv07GVkfMcQkGLfViOHDkGZGBoVSjtoICpwMs3pXTIqzI40iR+bdeGhZUGNYzEEUQBscHuGxavPXrsls1J3rC1YXAHV4KXZTOHWOj0CW7M2pS1j67vVcIsd+csy74gDHtj/gIe+AZgVpoThONkzAV4cM1ljnPpik7M2+gkpADmJgUwNymAuUkBzE0KYG5SAHNz9wE8coRQ9W1eoXtXX4T4pNQsHevu6YOpHFLMgIHuPAiYniUFcewT4KaQgHkY7DWxUogomXIrw2jZ898n8L7oTjAlqNrnzo6F1XlYwC1iddqkw7JBu8JuH3V0Jy86qLrQNfZTwC2Dl73Tlsa3acWBVUbHoHda5voTjW8aJZXEm2jFJBL/iR/zVtareg3j9wAAAABJRU5ErkJggg==" alt="消息通知"></a>
+                <div class="col-2"><a href="javascript:void(0);" id="menu-notify"
+                        class="animate__animated animate__animated animate__headShake"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHrSURBVHgB7ZjRccIwDECVXv/bEbxBYYOMwAjZoGwAG7QbkA3aDVImgE4QNggbqPLZuTrGTeRgJ9Dzu/OdDyRLshXFEUAi4QQRcxoVjQYVcl7APUCObvBvNjAV2pF3GsJDp8BhcogNGVkbBg8eehUjgApiQ0ZK06KHHoemlX+AeDxbjj0z9c4MGe5afKSDqPK3wt/KYXNA9VyInnUqHCZsCmnHG/TjzXUqqMrnEAWEANWu73A8NTpOg37b9uhsIQTa+aPDQIXqRIQlK3e21E6byJNbONZv07GVkfMcQkGLfViOHDkGZGBoVSjtoICpwMs3pXTIqzI40iR+bdeGhZUGNYzEEUQBscHuGxavPXrsls1J3rC1YXAHV4KXZTOHWOj0CW7M2pS1j67vVcIsd+csy74gDHtj/gIe+AZgVpoThONkzAV4cM1ljnPpik7M2+gkpADmJgUwNymAuUkBzE0KYG5SAHNz9wE8coRQ9W1eoXtXX4T4pNQsHevu6YOpHFLMgIHuPAiYniUFcewT4KaQgHkY7DWxUogomXIrw2jZ898n8L7oTjAlqNrnzo6F1XlYwC1iddqkw7JBu8JuH3V0Jy86qLrQNfZTwC2Dl73Tlsa3acWBVUbHoHda5voTjW8aJZXEm2jFJBL/iR/zVtareg3j9wAAAABJRU5ErkJggg=="
+                            alt="消息通知"></a>
                     <div class="pc-menu">
-                        <div class="menu-login-info"><span class="mr-20">王＊明 您好</span><a href="javascript:void(0);">登出</a></div>
+                        <div class="menu-login-info"><span class="mr-20">王＊明 您好</span><a
+                                href="javascript:void(0);">登出</a></div>
                         <ul>
                             <!--<li class="logout"><a class="common" href="javascript:void(0);">常用功能</a></li>-->
-                            <li class="login"><a class="notify-icon unread" href="javascript:void(0);"><i class="animate__animated animate__animated animate__headShake"></i>通知中心</a></li>
+                            <li class="login"><a class="notify-icon unread" href="javascript:void(0);"><i
+                                        class="animate__animated animate__animated animate__headShake"></i>通知中心</a></li>
                             <li><a href="javascript:void(0);">服務指南</a></li>
                             <li><a href="javascript:void(0);">新光人壽官網</a></li>
                         </ul>
@@ -82,7 +110,8 @@
                     <li>
                         <ul class="list-style-dot">
                             <li><a href="javascript:void(0);">扣款失敗如何繳費？</a></li>
-                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link" href="javascript:void(0);">看更多</a>
+                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link"
+                                href="javascript:void(0);">看更多</a>
                         </ul>
                     </li>
                 </ul>
@@ -177,7 +206,8 @@
                             <div onclick="location.href='detail-en.html'">
                                 <small>policy number <br class='mobile'>1002613096</small>
                                 <i>Next payment date：<br class='mobile'>2024/04/13</i>
-                                <a href="detail-en.html" class="txt-btn">Evergreen Health Lifetime Medical and Health Insurance <img src="images/arrow_up_red.png"></a>
+                                <a href="detail-en.html" class="txt-btn">Evergreen Health Lifetime Medical and Health
+                                    Insurance <img src="images/arrow_up_red.png"></a>
                                 <b><i>Policy Holder：</i>王＊明王＊明王＊明王＊明王＊明王＊明王＊明王＊明王＊明王＊明王＊明</b>
                                 <b><i>Insured：</i>王＊明</b>
                                 <b><i>Effective Date of Insurance Coverage：</i>2009/04/13</b>
@@ -193,7 +223,8 @@
                             <div onclick="location.href='detail-en.html'">
                                 <small>policy number <br class='mobile'>1002613096</small>
                                 <i>Next payment date：<br class='mobile'>2024/04/13</i>
-                                <a href="detail-en.html" class="txt-btn">Evergreen Health Lifetime Medical and Health Insurance <img src="images/arrow_up_red.png"></a>
+                                <a href="detail-en.html" class="txt-btn">Evergreen Health Lifetime Medical and Health
+                                    Insurance <img src="images/arrow_up_red.png"></a>
                                 <b><i>Policy Holder：</i>王＊明</b>
                                 <b><i>Insured：</i>王＊明</b>
                                 <b><i>Effective Date of Insurance Coverage：</i>2009/04/13</b>
@@ -211,7 +242,8 @@
                             <div onclick="location.href='detail-en.html'">
                                 <small>policy number <br class='mobile'>1002613096</small>
                                 <i>Next payment date：<br class='mobile'>2024/04/13</i>
-                                <a href="detail-en.html" class="txt-btn">Evergreen Health Lifetime Medical and Health Insurance <img src="images/arrow_up_red.png"></a>
+                                <a href="detail-en.html" class="txt-btn">Evergreen Health Lifetime Medical and Health
+                                    Insurance <img src="images/arrow_up_red.png"></a>
                                 <b><i>Policy Holder：</i>王＊明王＊明王＊明王＊明王＊明王＊明王＊明王＊明王＊明王＊明王＊明</b>
                                 <b><i>Insured：</i>王＊明</b>
                                 <b><i>Effective Date of Insurance Coverage：</i>2009/04/13</b>
@@ -227,7 +259,8 @@
                             <div onclick="location.href='detail-en.html'">
                                 <small>policy number <br class='mobile'>1002613096</small>
                                 <i>Next payment date：<br class='mobile'>2024/04/13</i>
-                                <a href="detail-en.html" class="txt-btn">Evergreen Health Lifetime Medical and Health Insurance <img src="images/arrow_up_red.png"></a>
+                                <a href="detail-en.html" class="txt-btn">Evergreen Health Lifetime Medical and Health
+                                    Insurance <img src="images/arrow_up_red.png"></a>
                                 <b><i>Policy Holder：</i>王＊明</b>
                                 <b><i>Insured：</i>王＊明</b>
                                 <b><i>Effective Date of Insurance Coverage：</i>2009/04/13</b>
@@ -245,10 +278,16 @@
                     <title>Note</title>
                     <div class="txt-word">
                         <ol>
-                            <li>There are time differences in the update of the records displayed in the column of Year of Payment.</li>
-                            <li>If there is any discrepancy or inconsistency in the information provided by this system, it shall be based on the content of the policy - insurance contract.</li>
-                            <li>We only accept applications for the policy reinstatement / rider reinstatement (with the suspension within six months) of the following: the policy denominated in New Taiwan dollars, with no policy loan and premium loan.</li>
-                            <li>If you cannot find the information about your insurance policy; there is an error in the information; or you have other questions, please contact your service personnel or use the customer service hotline at 0800-031-115.</li>
+                            <li>There are time differences in the update of the records displayed in the column of Year
+                                of Payment.</li>
+                            <li>If there is any discrepancy or inconsistency in the information provided by this system,
+                                it shall be based on the content of the policy - insurance contract.</li>
+                            <li>We only accept applications for the policy reinstatement / rider reinstatement (with the
+                                suspension within six months) of the following: the policy denominated in New Taiwan
+                                dollars, with no policy loan and premium loan.</li>
+                            <li>If you cannot find the information about your insurance policy; there is an error in the
+                                information; or you have other questions, please contact your service personnel or use
+                                the customer service hotline at 0800-031-115.</li>
                         </ol>
                     </div>
                 </div>
@@ -285,7 +324,8 @@
                     <li>
                         <ul class="list-style-dot">
                             <li><a href="javascript:void(0);">扣款失敗如何繳費？</a></li>
-                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link" href="javascript:void(0);">看更多</a>
+                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link"
+                                href="javascript:void(0);">看更多</a>
                         </ul>
                     </li>
                 </ul>
@@ -300,7 +340,10 @@
                 <li><a href="#">主管機關相關連結</a></li>
             </ul>
             <ul class="footer-detail-link">
-                <li><span>客戶服務專線 Tel 0800-031-115&nbsp;<a class="color-dark" href="#" target="_blank">專線操作說明&nbsp;</a>(服務時間：週一至週日08:30~22:00)｜樂齡服務專線(65歲以上)：07-238-9009 ｜海外諮詢(付費電話) +886-2-7736-1122&nbsp;<a class="color-dark" href="#" target="_blank">撥打語音客服</a></span></li>
+                <li><span>客戶服務專線 Tel 0800-031-115&nbsp;<a class="color-dark" href="#"
+                            target="_blank">專線操作說明&nbsp;</a>(服務時間：週一至週日08:30~22:00)｜樂齡服務專線(65歲以上)：07-238-9009
+                        ｜海外諮詢(付費電話) +886-2-7736-1122&nbsp;<a class="color-dark" href="#"
+                            target="_blank">撥打語音客服</a></span></li>
             </ul><span>如果您使用IE8 (含)以下版本瀏覽器，建議您升級您的IE瀏覽器，或使用其他瀏覽器軟體Google Chrome、Firefox，並搭配1024 x 768 以上之螢幕</span>
         </footer>
     </div>
@@ -456,8 +499,10 @@
                 <small>本人知悉新光人壽保險股份有限公司就網路保險服務契約提供五日審閱期，並已完成審閱。</small>
             </div>
             <div class="clearfix"></div>
-            <a href="javascript:" rel="modal:close" class="sik-btn-button red disabled" id="scrolling-dis">請滑至底部以完成閱讀</a>
-            <a href="javascript:" rel="modal:close" class="sik-btn-button red" style="display: none;" id="scrolling-btn">同意</a>
+            <a href="javascript:" rel="modal:close" class="sik-btn-button red disabled"
+                id="scrolling-dis">請滑至底部以完成閱讀</a>
+            <a href="javascript:" rel="modal:close" class="sik-btn-button red" style="display: none;"
+                id="scrolling-btn">同意</a>
         </div>
     </div>
     <div id="contact" class="modal sik-modal">
@@ -513,22 +558,22 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.modal.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.sidebar-menu-accordion').click(function() {
+    $(document).ready(function () {
+        $('.sidebar-menu-accordion').click(function () {
             $(this).parent().toggleClass('active');
         });
 
-        $('.sort-detail > span').click(function() {
+        $('.sort-detail > span').click(function () {
             $(this).toggleClass('active');
             $('.sort-list').toggleClass('open');
         });
 
-        $('.sort-detail > a').click(function() {
+        $('.sort-detail > a').click(function () {
             $(this).parent().fadeOut();
             $('.detail-btn').removeClass('active');
         });
 
-        $('.sort-list > li i').click(function() {
+        $('.sort-list > li i').click(function () {
             $(this).parent().fadeOut().delay(500).remove();
 
             var divContent = $(".sort-list").html();
@@ -538,11 +583,11 @@
             }
         });
 
-        $('.search-list > li').click(function() {
+        $('.search-list > li').click(function () {
             $(this).toggleClass('active');
         });
 
-        $('#search-list-all2').click(function() {
+        $('#search-list-all2').click(function () {
             if ($('#search-list-all2').hasClass("active")) {
                 $('.search-list2 > li').removeClass('active');
                 $('#search-list-all2').removeClass('active');
@@ -552,7 +597,7 @@
             }
         });
 
-        $('.modal .footshadow a').click(function() {
+        $('.modal .footshadow a').click(function () {
             $('.detail-btn').addClass('active');
             $('.sort-detail').addClass('open');
             $('.sort-detail').show();
@@ -561,15 +606,15 @@
             $('.sort-list > li').show();
         });
 
-        $('.search-title > a').click(function() {
+        $('.search-title > a').click(function () {
             var classes = ['active1', 'active2', 'active3'];
-            $('.search-title > a').each(function() {
+            $('.search-title > a').each(function () {
                 this.className = classes[($.inArray(this.className, classes) + 1) % classes.length];
             });
         });
 
         let scrolling = document.getElementById('scrolling');
-        scrolling.addEventListener('scroll', function(e) {
+        scrolling.addEventListener('scroll', function (e) {
             if (this.scrollHeight - this.scrollTop - this.clientHeight <= 0) {
                 $('#scrolling-dis').hide();
                 $('#scrolling-btn').show();

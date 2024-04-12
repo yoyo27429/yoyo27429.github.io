@@ -17,22 +17,50 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+        (function (m, a, z, e) {
+            var s, t;
+            try {
+                t = m.sessionStorage.getItem('maze-us');
+            } catch (err) { }
+
+            if (!t) {
+                t = new Date().getTime();
+                try {
+                    m.sessionStorage.setItem('maze-us', t);
+                } catch (err) { }
+            }
+
+            s = a.createElement('script');
+            s.src = z + '?apiKey=' + e;
+            s.async = true;
+            a.getElementsByTagName('head')[0].appendChild(s);
+            m.mazeUniversalSnippetApiKey = e;
+        })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '4ceff9ab-59dd-4fc6-969c-c5df87f98b8c');
+    </script>
 </head>
 
 <body>
-    <div class="sik-fix-contact"><a href=""><img src="images/fix-contact-icon.png"></a><a href="javascript:" class="back-to-top"><img src="images/back-top.png"></a></div>
+    <div class="sik-fix-contact"><a href=""><img src="images/fix-contact-icon.png"></a><a href="javascript:"
+            class="back-to-top"><img src="images/back-top.png"></a></div>
     <div id="wrapper">
         <header>
             <div class="flex">
                 <div class="col">
-                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="新光人壽"><span>｜會員專區</span></a></div>
+                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="新光人壽"><span>｜會員專區</span></a>
+                    </div>
                 </div>
-                <div class="col-2"><a href="javascript:void(0);" id="menu-notify" class="animate__animated animate__animated animate__headShake"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHrSURBVHgB7ZjRccIwDECVXv/bEbxBYYOMwAjZoGwAG7QbkA3aDVImgE4QNggbqPLZuTrGTeRgJ9Dzu/OdDyRLshXFEUAi4QQRcxoVjQYVcl7APUCObvBvNjAV2pF3GsJDp8BhcogNGVkbBg8eehUjgApiQ0ZK06KHHoemlX+AeDxbjj0z9c4MGe5afKSDqPK3wt/KYXNA9VyInnUqHCZsCmnHG/TjzXUqqMrnEAWEANWu73A8NTpOg37b9uhsIQTa+aPDQIXqRIQlK3e21E6byJNbONZv07GVkfMcQkGLfViOHDkGZGBoVSjtoICpwMs3pXTIqzI40iR+bdeGhZUGNYzEEUQBscHuGxavPXrsls1J3rC1YXAHV4KXZTOHWOj0CW7M2pS1j67vVcIsd+csy74gDHtj/gIe+AZgVpoThONkzAV4cM1ljnPpik7M2+gkpADmJgUwNymAuUkBzE0KYG5SAHNz9wE8coRQ9W1eoXtXX4T4pNQsHevu6YOpHFLMgIHuPAiYniUFcewT4KaQgHkY7DWxUogomXIrw2jZ898n8L7oTjAlqNrnzo6F1XlYwC1iddqkw7JBu8JuH3V0Jy86qLrQNfZTwC2Dl73Tlsa3acWBVUbHoHda5voTjW8aJZXEm2jFJBL/iR/zVtareg3j9wAAAABJRU5ErkJggg==" alt="消息通知"></a>
+                <div class="col-2"><a href="javascript:void(0);" id="menu-notify"
+                        class="animate__animated animate__animated animate__headShake"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHrSURBVHgB7ZjRccIwDECVXv/bEbxBYYOMwAjZoGwAG7QbkA3aDVImgE4QNggbqPLZuTrGTeRgJ9Dzu/OdDyRLshXFEUAi4QQRcxoVjQYVcl7APUCObvBvNjAV2pF3GsJDp8BhcogNGVkbBg8eehUjgApiQ0ZK06KHHoemlX+AeDxbjj0z9c4MGe5afKSDqPK3wt/KYXNA9VyInnUqHCZsCmnHG/TjzXUqqMrnEAWEANWu73A8NTpOg37b9uhsIQTa+aPDQIXqRIQlK3e21E6byJNbONZv07GVkfMcQkGLfViOHDkGZGBoVSjtoICpwMs3pXTIqzI40iR+bdeGhZUGNYzEEUQBscHuGxavPXrsls1J3rC1YXAHV4KXZTOHWOj0CW7M2pS1j67vVcIsd+csy74gDHtj/gIe+AZgVpoThONkzAV4cM1ljnPpik7M2+gkpADmJgUwNymAuUkBzE0KYG5SAHNz9wE8coRQ9W1eoXtXX4T4pNQsHevu6YOpHFLMgIHuPAiYniUFcewT4KaQgHkY7DWxUogomXIrw2jZ898n8L7oTjAlqNrnzo6F1XlYwC1iddqkw7JBu8JuH3V0Jy86qLrQNfZTwC2Dl73Tlsa3acWBVUbHoHda5voTjW8aJZXEm2jFJBL/iR/zVtareg3j9wAAAABJRU5ErkJggg=="
+                            alt="消息通知"></a>
                     <div class="pc-menu">
-                        <div class="menu-login-info"><span class="mr-20">王＊明 您好</span><a href="javascript:void(0);">登出</a></div>
+                        <div class="menu-login-info"><span class="mr-20">王＊明 您好</span><a
+                                href="javascript:void(0);">登出</a></div>
                         <ul>
                             <!--<li class="logout"><a class="common" href="javascript:void(0);">常用功能</a></li>-->
-                            <li class="login"><a class="notify-icon unread" href="javascript:void(0);"><i class="animate__animated animate__animated animate__headShake"></i>通知中心</a></li>
+                            <li class="login"><a class="notify-icon unread" href="javascript:void(0);"><i
+                                        class="animate__animated animate__animated animate__headShake"></i>通知中心</a></li>
                             <li><a href="javascript:void(0);">服務指南</a></li>
                             <li><a href="javascript:void(0);">新光人壽官網</a></li>
                         </ul>
@@ -81,7 +109,8 @@
                     <li>
                         <ul class="list-style-dot">
                             <li><a href="javascript:void(0);">扣款失敗如何繳費？</a></li>
-                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link" href="javascript:void(0);">看更多</a>
+                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link"
+                                href="javascript:void(0);">看更多</a>
                         </ul>
                     </li>
                 </ul>
@@ -111,7 +140,8 @@
                     <title>同意 / 停止交互運用個人資料申請書</title>
                     <div class="single-input">
                         <br>
-                        <span>交互運用個資申請 <a href="#txt" rel='modal:open'>more<img src="images/arrow_right_blue.png"></a></span>
+                        <span>交互運用個資申請 <a href="#txt" rel='modal:open'>more<img
+                                    src="images/arrow_right_blue.png"></a></span>
                         <span>申請時間 2023/12/01 18:00:26</span>
                         <fieldset>
                             <div class="check">
@@ -133,7 +163,8 @@
                     <title class="border">同意 / 停止新光資料共享客戶同意書</title>
                     <div class="single-input">
                         <br>
-                        <span>新光資料共享申請 <a href="#txt" rel='modal:open'>more<img src="images/arrow_right_blue.png"></a></span>
+                        <span>新光資料共享申請 <a href="#txt" rel='modal:open'>more<img
+                                    src="images/arrow_right_blue.png"></a></span>
                         <fieldset>
                             <div class="check">
                                 <label>
@@ -190,7 +221,8 @@
                     <li>
                         <ul class="list-style-dot">
                             <li><a href="javascript:void(0);">扣款失敗如何繳費？</a></li>
-                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link" href="javascript:void(0);">看更多</a>
+                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link"
+                                href="javascript:void(0);">看更多</a>
                         </ul>
                     </li>
                 </ul>
@@ -205,7 +237,10 @@
                 <li><a href="#">主管機關相關連結</a></li>
             </ul>
             <ul class="footer-detail-link">
-                <li><span>客戶服務專線 Tel 0800-031-115&nbsp;<a class="color-dark" href="#" target="_blank">專線操作說明&nbsp;</a>(服務時間：週一至週日08:30~22:00)｜樂齡服務專線(65歲以上)：07-238-9009 ｜海外諮詢(付費電話) +886-2-7736-1122&nbsp;<a class="color-dark" href="#" target="_blank">撥打語音客服</a></span></li>
+                <li><span>客戶服務專線 Tel 0800-031-115&nbsp;<a class="color-dark" href="#"
+                            target="_blank">專線操作說明&nbsp;</a>(服務時間：週一至週日08:30~22:00)｜樂齡服務專線(65歲以上)：07-238-9009
+                        ｜海外諮詢(付費電話) +886-2-7736-1122&nbsp;<a class="color-dark" href="#"
+                            target="_blank">撥打語音客服</a></span></li>
             </ul><span>如果您使用IE8 (含)以下版本瀏覽器，建議您升級您的IE瀏覽器，或使用其他瀏覽器軟體Google Chrome、Firefox，並搭配1024 x 768 以上之螢幕</span>
         </footer>
     </div>
@@ -215,7 +250,8 @@
             <div class="overflow sik-setting">
                 <div class="main-center">
                     <title>交互運用個人資料申請書</title>
-                    <p>本人了解　貴公司基於金融控股公司法第43條規定，得提供本人之姓名及地址予新光金融控股股份有限公司(下稱新光金控)及其子公司(包括新光人壽保險股份有限公司、臺灣新光商業銀行股份有限公司、新光證券投資信託股份有限公司、新光金保險代理人股份有限公司、元富證券股份有限公司及未來因組織調整，依法於新光金控及其子公司網站揭露公告之新增或異動之子公司)間進行共同行銷。</p>
+                    <p>本人了解　貴公司基於金融控股公司法第43條規定，得提供本人之姓名及地址予新光金融控股股份有限公司(下稱新光金控)及其子公司(包括新光人壽保險股份有限公司、臺灣新光商業銀行股份有限公司、新光證券投資信託股份有限公司、新光金保險代理人股份有限公司、元富證券股份有限公司及未來因組織調整，依法於新光金控及其子公司網站揭露公告之新增或異動之子公司)間進行共同行銷。
+                    </p>
                     <p>本人同意提供除姓名及地址外之其他基本資料、往來交易及其他相關資料(包括帳務、信用、投資、保險等)予新光金控及其子公司，進行共同行銷之建檔、揭露、轉介或交互運用。</p>
                     <p class="red">※本人同意提供除姓名及地址外之其他基本資料、往來交易及其他相關資料(包括帳務、信用、投資、保險等)予新光金控及其子公司，進行共同行銷之建檔、揭露、轉介或交互運用。</p>
                 </div>
@@ -304,8 +340,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.modal.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.sidebar-menu-accordion').click(function() {
+    $(document).ready(function () {
+        $('.sidebar-menu-accordion').click(function () {
             $(this).parent().toggleClass('active');
         });
 
