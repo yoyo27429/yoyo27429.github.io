@@ -1,0 +1,267 @@
+@mixin desktop {
+    @media(min-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin smmobile {
+    @media(max-width: 320px) {
+        @content;
+    }
+}
+
+.sik-setting {
+    .common {
+        &.lg {
+            .list {
+                li {
+                    margin: 0 14px 15px 14px;
+
+                    @include pad {
+                        margin: 0 4vw 15px 4vw;
+                    }
+
+                    @include smmobile {
+                        margin: 0 1.5vw 15px 1.5vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-center {
+        title {
+            & + a {
+                &:after {
+                    display: none;
+                }
+
+                &:before {
+                    content: "Choose ";
+                }
+
+                &.active {
+                    &:before {
+                        content: "Cancel ";
+                    }
+                }
+            }
+        }
+
+        .sort {
+            > center {
+                width: calc(50% - 110px);
+
+                @include pad {
+                    width: 100%;
+                    margin: 0 auto 15px auto;
+                }
+
+                > div {
+                    @include pad {
+                        line-height: 34px;
+                    }
+
+                    b {
+                        line-height: 22px;
+                        text-align: left;
+
+                        @include pad {
+                            width: 120px;
+                            text-align: left;
+                        }
+                    }
+
+                    select {
+                        width: calc(100% - 120px);
+                    }
+                }
+            }
+
+            .detail-btn {
+                @include pad {
+                    float: left;
+                    line-height: 34px;
+                }
+            }
+        }
+
+        .sort-detail {
+            .sort-list {
+                li {
+                    width: auto;
+                    margin: 10px 10px 0 0;
+                    padding: 5px 40px 5px 15px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        .policy-list {
+            li {
+                > div {
+                    a.sik-btn-button {
+                        width: auto;
+                        padding: 0 20px;
+                    }
+
+                    b {
+                        padding-left: 105px;
+                        word-break: break-all;
+
+                        i {
+                            width: 105px;
+                            white-space: nowrap;
+                        }
+
+                        &:nth-of-type(2) {
+                            padding-left: 60px;
+
+                            i {
+                                width: 60px;
+                            }
+                        }
+                        
+                        &:nth-of-type(3) {
+                            padding-left: 260px;
+                            
+                            @include mobile {
+                                padding: 20px 0 0 0;
+                            }
+
+                            i {
+                                width: 260px;
+                                
+                                @include mobile {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    > i {
+                        @include mobile {
+                            line-height: 18px;
+                            text-align: right;
+                        }
+                    }
+
+                    > small {
+                        @include mobile {
+                            margin-top: 0;
+                            line-height: 18px;
+                        }
+                    }
+                    
+                    > div {
+                        padding-right: 40px;
+                    }
+                }
+
+                a.phone-btn {
+                    &:hover {
+                        &:after {
+                            content: "Contact now";
+                            width: 103px;
+                            left: -31px;
+                            background: url(../images/contact-tooltips-en.png) no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .detail-btn-list {
+            > div {
+                .sik-btn-button {
+                    @include pad {
+                        width: calc(50% - 10px);
+                        margin: 0 10px 20px 0;
+                        float: none;
+
+                        &:nth-of-type(2n) {
+                            margin-right: 0;
+                        }
+                    }
+
+                    @include mobile {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .search-title {
+            a {
+                @include mobile {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}
+
+.sik-modal {
+    .center {
+        .sik-setting {
+            .main-center {
+                .search-list:not(.search-list2) {
+                    li {
+                        @include pad {
+                            width: calc(50% - 5px);
+                            
+                            &:nth-of-type(4n) {
+                                margin-right: 10px;
+                            }
+
+                            &:nth-of-type(2n) {
+                                margin-right: 0 !important;
+                            }
+                        }
+                    }
+                }
+
+                .search-list2 {
+                    li {
+                        width: auto !important;
+                        padding: 0 20px;
+                        white-space: nowrap;
+
+                        &:nth-of-type(4n) {
+                            margin-right: 10px;
+                        }
+
+                        @include mobile {
+                            position: relative;
+                            padding: 5px 12px 5px 34px;
+                            line-height: 22px;
+                            white-space: normal;
+                            text-align: left;
+
+                            img {
+                                position: absolute;
+                                left: 12px;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

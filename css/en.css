@@ -1,0 +1,173 @@
+.sik-setting .common.lg .list li {
+  margin: 0 14px 15px 14px;
+}
+@media (max-width: 900px) {
+  .sik-setting .common.lg .list li {
+    margin: 0 4vw 15px 4vw;
+  }
+}
+@media (max-width: 320px) {
+  .sik-setting .common.lg .list li {
+    margin: 0 1.5vw 15px 1.5vw;
+  }
+}
+.sik-setting .main-center title + a:after {
+  display: none;
+}
+.sik-setting .main-center title + a:before {
+  content: "Choose ";
+}
+.sik-setting .main-center title + a.active:before {
+  content: "Cancel ";
+}
+.sik-setting .main-center .sort > center {
+  width: calc(50% - 110px);
+}
+@media (max-width: 900px) {
+  .sik-setting .main-center .sort > center {
+    width: 100%;
+    margin: 0 auto 15px auto;
+  }
+}
+@media (max-width: 900px) {
+  .sik-setting .main-center .sort > center > div {
+    line-height: 34px;
+  }
+}
+.sik-setting .main-center .sort > center > div b {
+  line-height: 22px;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .sik-setting .main-center .sort > center > div b {
+    width: 120px;
+    text-align: left;
+  }
+}
+.sik-setting .main-center .sort > center > div select {
+  width: calc(100% - 120px);
+}
+@media (max-width: 900px) {
+  .sik-setting .main-center .sort .detail-btn {
+    float: left;
+    line-height: 34px;
+  }
+}
+.sik-setting .main-center .sort-detail .sort-list li {
+  width: auto;
+  margin: 10px 10px 0 0;
+  padding: 5px 40px 5px 15px;
+  line-height: 22px;
+}
+.sik-setting .main-center .policy-list li > div a.sik-btn-button {
+  width: auto;
+  padding: 0 20px;
+}
+.sik-setting .main-center .policy-list li > div b {
+  padding-left: 105px;
+  word-break: break-all;
+}
+.sik-setting .main-center .policy-list li > div b i {
+  width: 105px;
+  white-space: nowrap;
+}
+.sik-setting .main-center .policy-list li > div b:nth-of-type(2) {
+  padding-left: 60px;
+}
+.sik-setting .main-center .policy-list li > div b:nth-of-type(2) i {
+  width: 60px;
+}
+.sik-setting .main-center .policy-list li > div b:nth-of-type(3) {
+  padding-left: 260px;
+}
+@media (max-width: 600px) {
+  .sik-setting .main-center .policy-list li > div b:nth-of-type(3) {
+    padding: 20px 0 0 0;
+  }
+}
+.sik-setting .main-center .policy-list li > div b:nth-of-type(3) i {
+  width: 260px;
+}
+@media (max-width: 600px) {
+  .sik-setting .main-center .policy-list li > div b:nth-of-type(3) i {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .sik-setting .main-center .policy-list li > div > i {
+    line-height: 18px;
+    text-align: right;
+  }
+}
+@media (max-width: 600px) {
+  .sik-setting .main-center .policy-list li > div > small {
+    margin-top: 0;
+    line-height: 18px;
+  }
+}
+.sik-setting .main-center .policy-list li > div > div {
+  padding-right: 40px;
+}
+.sik-setting .main-center .policy-list li a.phone-btn:hover:after {
+  content: "Contact now";
+  width: 103px;
+  left: -31px;
+  background: url(../images/contact-tooltips-en.png) no-repeat;
+  background-size: 100% 100%;
+}
+@media (max-width: 900px) {
+  .sik-setting .main-center .detail-btn-list > div .sik-btn-button {
+    width: calc(50% - 10px);
+    margin: 0 10px 20px 0;
+    float: none;
+  }
+  .sik-setting .main-center .detail-btn-list > div .sik-btn-button:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 600px) {
+  .sik-setting .main-center .detail-btn-list > div .sik-btn-button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .sik-setting .main-center .search-title a {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sik-modal .center .sik-setting .main-center .search-list:not(.search-list2) li {
+    width: calc(50% - 5px);
+  }
+  .sik-modal .center .sik-setting .main-center .search-list:not(.search-list2) li:nth-of-type(4n) {
+    margin-right: 10px;
+  }
+  .sik-modal .center .sik-setting .main-center .search-list:not(.search-list2) li:nth-of-type(2n) {
+    margin-right: 0 !important;
+  }
+}
+.sik-modal .center .sik-setting .main-center .search-list2 li {
+  width: auto !important;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+.sik-modal .center .sik-setting .main-center .search-list2 li:nth-of-type(4n) {
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  .sik-modal .center .sik-setting .main-center .search-list2 li {
+    position: relative;
+    padding: 5px 12px 5px 34px;
+    line-height: 22px;
+    white-space: normal;
+    text-align: left;
+  }
+  .sik-modal .center .sik-setting .main-center .search-list2 li img {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
