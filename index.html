@@ -17,9 +17,32 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+        (function (m, a, z, e) {
+            var s, t;
+            try {
+                t = m.sessionStorage.getItem('maze-us');
+            } catch (err) { }
+
+            if (!t) {
+                t = new Date().getTime();
+                try {
+                    m.sessionStorage.setItem('maze-us', t);
+                } catch (err) { }
+            }
+
+            s = a.createElement('script');
+            s.src = z + '?apiKey=' + e;
+            s.async = true;
+            a.getElementsByTagName('head')[0].appendChild(s);
+            m.mazeUniversalSnippetApiKey = e;
+        })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '4ceff9ab-59dd-4fc6-969c-c5df87f98b8c');
+    </script>
 </head>
+
 <body>
-    <div class="sik-fix-contact"><a href=""><img src="images/fix-contact-icon.png"></a><a href="javascript:" class="back-to-top"><img src="images/back-top.png"></a></div>
+    <div class="sik-fix-contact"><a href=""><img src="images/fix-contact-icon.png"></a><a href="javascript:"
+            class="back-to-top"><img src="images/back-top.png"></a></div>
     <div class="stickybar index show">
         <div>
             <title>王小明小明，您好</title>
@@ -35,14 +58,20 @@
         <header>
             <div class="flex">
                 <div class="col">
-                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="新光人壽"><span>｜會員專區</span></a></div>
+                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="新光人壽"><span>｜會員專區</span></a>
+                    </div>
                 </div>
-                <div class="col-2"><a href="javascript:void(0);" id="menu-notify" class="animate__animated animate__animated animate__headShake"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHrSURBVHgB7ZjRccIwDECVXv/bEbxBYYOMwAjZoGwAG7QbkA3aDVImgE4QNggbqPLZuTrGTeRgJ9Dzu/OdDyRLshXFEUAi4QQRcxoVjQYVcl7APUCObvBvNjAV2pF3GsJDp8BhcogNGVkbBg8eehUjgApiQ0ZK06KHHoemlX+AeDxbjj0z9c4MGe5afKSDqPK3wt/KYXNA9VyInnUqHCZsCmnHG/TjzXUqqMrnEAWEANWu73A8NTpOg37b9uhsIQTa+aPDQIXqRIQlK3e21E6byJNbONZv07GVkfMcQkGLfViOHDkGZGBoVSjtoICpwMs3pXTIqzI40iR+bdeGhZUGNYzEEUQBscHuGxavPXrsls1J3rC1YXAHV4KXZTOHWOj0CW7M2pS1j67vVcIsd+csy74gDHtj/gIe+AZgVpoThONkzAV4cM1ljnPpik7M2+gkpADmJgUwNymAuUkBzE0KYG5SAHNz9wE8coRQ9W1eoXtXX4T4pNQsHevu6YOpHFLMgIHuPAiYniUFcewT4KaQgHkY7DWxUogomXIrw2jZ898n8L7oTjAlqNrnzo6F1XlYwC1iddqkw7JBu8JuH3V0Jy86qLrQNfZTwC2Dl73Tlsa3acWBVUbHoHda5voTjW8aJZXEm2jFJBL/iR/zVtareg3j9wAAAABJRU5ErkJggg==" alt="消息通知"></a>
+                <div class="col-2"><a href="javascript:void(0);" id="menu-notify"
+                        class="animate__animated animate__animated animate__headShake"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHrSURBVHgB7ZjRccIwDECVXv/bEbxBYYOMwAjZoGwAG7QbkA3aDVImgE4QNggbqPLZuTrGTeRgJ9Dzu/OdDyRLshXFEUAi4QQRcxoVjQYVcl7APUCObvBvNjAV2pF3GsJDp8BhcogNGVkbBg8eehUjgApiQ0ZK06KHHoemlX+AeDxbjj0z9c4MGe5afKSDqPK3wt/KYXNA9VyInnUqHCZsCmnHG/TjzXUqqMrnEAWEANWu73A8NTpOg37b9uhsIQTa+aPDQIXqRIQlK3e21E6byJNbONZv07GVkfMcQkGLfViOHDkGZGBoVSjtoICpwMs3pXTIqzI40iR+bdeGhZUGNYzEEUQBscHuGxavPXrsls1J3rC1YXAHV4KXZTOHWOj0CW7M2pS1j67vVcIsd+csy74gDHtj/gIe+AZgVpoThONkzAV4cM1ljnPpik7M2+gkpADmJgUwNymAuUkBzE0KYG5SAHNz9wE8coRQ9W1eoXtXX4T4pNQsHevu6YOpHFLMgIHuPAiYniUFcewT4KaQgHkY7DWxUogomXIrw2jZ898n8L7oTjAlqNrnzo6F1XlYwC1iddqkw7JBu8JuH3V0Jy86qLrQNfZTwC2Dl73Tlsa3acWBVUbHoHda5voTjW8aJZXEm2jFJBL/iR/zVtareg3j9wAAAABJRU5ErkJggg=="
+                            alt="消息通知"></a>
                     <div class="pc-menu">
-                        <div class="menu-login-info"><span class="mr-20">王＊明 您好</span><a href="javascript:void(0);">登出</a></div>
+                        <div class="menu-login-info"><span class="mr-20">王＊明 您好</span><a
+                                href="javascript:void(0);">登出</a></div>
                         <ul>
                             <!--<li class="logout"><a class="common" href="javascript:void(0);">常用功能</a></li>-->
-                            <li class="login"><a class="notify-icon unread" href="javascript:void(0);"><i class="animate__animated animate__animated animate__headShake"></i>通知中心</a></li>
+                            <li class="login"><a class="notify-icon unread" href="javascript:void(0);"><i
+                                        class="animate__animated animate__animated animate__headShake"></i>通知中心</a></li>
                             <li><a href="javascript:void(0);">服務指南</a></li>
                             <li><a href="javascript:void(0);">新光人壽官網</a></li>
                         </ul>
@@ -128,7 +157,8 @@
                     <li>
                         <ul class="list-style-dot">
                             <li><a href="javascript:void(0);">扣款失敗如何繳費？</a></li>
-                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link" href="javascript:void(0);">看更多</a>
+                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link"
+                                href="javascript:void(0);">看更多</a>
                         </ul>
                     </li>
                 </ul>
@@ -157,23 +187,35 @@
                     </div>
                 </div>
                 <div class="common-set-area section-area">
-                    <h4 class="title">常用功能</h4><a class="common-set-edit" href="setting-main.html"><span>編輯</span></a></a>
+                    <h4 class="title">常用功能</h4><a class="common-set-edit"
+                        href="setting-main.html"><span>編輯</span></a></a>
                     <div class="common-set-buttons flex"><a class="common-set-button col" href="list.html">
-                            <div class="common-set-button-icon"><img src="images/common/01.png" alt="保單列表"></div><span>保單列表</span>
+                            <div class="common-set-button-icon"><img src="images/common/01.png" alt="保單列表"></div>
+                            <span>保單列表</span>
                         </a><a class="common-set-button col" href="javascript:void(0);">
-                            <div class="common-set-button-icon"><img src="images/common/02.png" alt="保單資料修改"></div><span>保單資料修改</span>
+                            <div class="common-set-button-icon"><img src="images/common/02.png" alt="保單資料修改"></div>
+                            <span>保單資料修改</span>
                         </a><a class="common-set-button col" href="javascript:void(0);">
-                            <div class="common-set-button-icon"><img src="images/common/03.png"></div><span>保單借款總覽</span>
+                            <div class="common-set-button-icon"><img src="images/common/03.png"></div>
+                            <span>保單借款總覽</span>
                         </a><a class="common-set-button col no-set" href="setting.html">
-                            <div class="common-set-button-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACXSURBVHgB7ZWxDcIwEEX/P3mQTEJJCWwAG8AGWSWsYDqIhCCLZAQYIBxxkZRWLmmixE+yfbL+17/ipANWxa2szv7xulg8YhErcABlb/GYAsaQAlLAdNgV/v4+KTWLiinH8Kr+rlGdst5tN0WoXf8rzAlmGNIVJY8LULd3ASu+rJ7hWDxpilLA4gJUvzDiLOLGNWEffzAn/opkId+mhIqAAAAAAElFTkSuQmCC" alt="新增常用功能"><img src="images/plus_red.png" alt="新增常用功能"></div><span>新增常用功能</span>
+                            <div class="common-set-button-icon"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACXSURBVHgB7ZWxDcIwEEX/P3mQTEJJCWwAG8AGWSWsYDqIhCCLZAQYIBxxkZRWLmmixE+yfbL+17/ipANWxa2szv7xulg8YhErcABlb/GYAsaQAlLAdNgV/v4+KTWLiinH8Kr+rlGdst5tN0WoXf8rzAlmGNIVJY8LULd3ASu+rJ7hWDxpilLA4gJUvzDiLOLGNWEffzAn/opkId+mhIqAAAAAAElFTkSuQmCC"
+                                    alt="新增常用功能"><img src="images/plus_red.png" alt="新增常用功能"></div><span>新增常用功能</span>
                         </a><a class="common-set-button col no-set" href="setting.html">
-                            <div class="common-set-button-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACXSURBVHgB7ZWxDcIwEEX/P3mQTEJJCWwAG8AGWSWsYDqIhCCLZAQYIBxxkZRWLmmixE+yfbL+17/ipANWxa2szv7xulg8YhErcABlb/GYAsaQAlLAdNgV/v4+KTWLiinH8Kr+rlGdst5tN0WoXf8rzAlmGNIVJY8LULd3ASu+rJ7hWDxpilLA4gJUvzDiLOLGNWEffzAn/opkId+mhIqAAAAAAElFTkSuQmCC" alt="新增常用功能"><img src="images/plus_red.png" alt="新增常用功能"></div><span>新增常用功能</span>
+                            <div class="common-set-button-icon"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACXSURBVHgB7ZWxDcIwEEX/P3mQTEJJCWwAG8AGWSWsYDqIhCCLZAQYIBxxkZRWLmmixE+yfbL+17/ipANWxa2szv7xulg8YhErcABlb/GYAsaQAlLAdNgV/v4+KTWLiinH8Kr+rlGdst5tN0WoXf8rzAlmGNIVJY8LULd3ASu+rJ7hWDxpilLA4gJUvzDiLOLGNWEffzAn/opkId+mhIqAAAAAAElFTkSuQmCC"
+                                    alt="新增常用功能"><img src="images/plus_red.png" alt="新增常用功能"></div><span>新增常用功能</span>
                         </a><a class="common-set-button col no-set" href="setting.html">
-                            <div class="common-set-button-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACXSURBVHgB7ZWxDcIwEEX/P3mQTEJJCWwAG8AGWSWsYDqIhCCLZAQYIBxxkZRWLmmixE+yfbL+17/ipANWxa2szv7xulg8YhErcABlb/GYAsaQAlLAdNgV/v4+KTWLiinH8Kr+rlGdst5tN0WoXf8rzAlmGNIVJY8LULd3ASu+rJ7hWDxpilLA4gJUvzDiLOLGNWEffzAn/opkId+mhIqAAAAAAElFTkSuQmCC" alt="新增常用功能"><img src="images/plus_red.png" alt="新增常用功能"></div><span>新增常用功能</span>
+                            <div class="common-set-button-icon"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACXSURBVHgB7ZWxDcIwEEX/P3mQTEJJCWwAG8AGWSWsYDqIhCCLZAQYIBxxkZRWLmmixE+yfbL+17/ipANWxa2szv7xulg8YhErcABlb/GYAsaQAlLAdNgV/v4+KTWLiinH8Kr+rlGdst5tN0WoXf8rzAlmGNIVJY8LULd3ASu+rJ7hWDxpilLA4gJUvzDiLOLGNWEffzAn/opkId+mhIqAAAAAAElFTkSuQmCC"
+                                    alt="新增常用功能"><img src="images/plus_red.png" alt="新增常用功能"></div><span>新增常用功能</span>
                         </a></div>
                 </div>
                 <div class="user-policy-area section-area">
-                    <div class="tabs-buttons"><a class="tab on" href="javascript:void(0);" onclick="policyTabChange(this);">我的保單</a><a class="tab" href="javascript:void(0);" onclick="policyTabChange(this);">保障檢視</a></div>
+                    <div class="tabs-buttons"><a class="tab on" href="javascript:void(0);"
+                            onclick="policyTabChange(this);">我的保單</a><a class="tab" href="javascript:void(0);"
+                            onclick="policyTabChange(this);">保障檢視</a></div>
                     <div class="tabs-container">
                         <div class="tab-content on">
                             <div class="user-policy-filter flex">
@@ -185,11 +227,15 @@
                                             </select></div>
                                     </div>
                                 </div>
-                                <div class="user-policy-filter-currency col"><span>保單幣別</span><label for="currency-TW"><input class="button small" id="currency-TW" type="radio" name="currency" value="台幣" checked="checked">
+                                <div class="user-policy-filter-currency col"><span>保單幣別</span><label
+                                        for="currency-TW"><input class="button small" id="currency-TW" type="radio"
+                                            name="currency" value="台幣" checked="checked">
                                         <div class="button small on">台幣</div>
-                                    </label><label for="currency-USD"><input class="button small" id="currency-USD" type="radio" name="currency" value="美金">
+                                    </label><label for="currency-USD"><input class="button small" id="currency-USD"
+                                            type="radio" name="currency" value="美金">
                                         <div class="button small">美金</div>
-                                    </label><label for="currency-HKD"><input class="button small" id="currency-HKD" type="radio" name="currency" value="港幣">
+                                    </label><label for="currency-HKD"><input class="button small" id="currency-HKD"
+                                            type="radio" name="currency" value="港幣">
                                         <div class="button small">港幣</div>
                                     </label></div>
                             </div>
@@ -238,7 +284,8 @@
                                         <div class="user-policy-details-feedback flex">
                                             <div class="col">已借金額</div>
                                             <div class="col-2">
-                                                <h4>734,418</h4>元<a class="button small ml-10" href="javascript:void(0);">負債明細</a>
+                                                <h4>734,418</h4>元<a class="button small ml-10"
+                                                    href="javascript:void(0);">負債明細</a>
                                             </div>
                                         </div>
                                     </div>
@@ -246,7 +293,8 @@
                                         <div class="user-policy-details-expiration flex">
                                             <div class="col">最高可借淨額</div>
                                             <div class="col-2">
-                                                <h4>793,000</h4>元<a class="button small ml-10" href="javascript:void(0);">線上借款</a>
+                                                <h4>793,000</h4>元<a class="button small ml-10"
+                                                    href="javascript:void(0);">線上借款</a>
                                             </div>
                                         </div>
                                         <div class="user-policy-details-payback flex">
@@ -260,16 +308,33 @@
                             </div>
                             <a class="button button-red arrow-bottom" href="javascript:void(0);">其他總覽項目</a>
                             <div class="user-policy-calendar-area">
-                                <div class="user-policy-calendar-tabs"><a class="user-policy-calendar-tab on" href="javascript:void(0);" onclick="policyCalendarTabChange(this)">繳費年曆</a><a class="user-policy-calendar-tab" href="javascript:void(0);" onclick="policyCalendarTabChange(this)">給付年曆</a></div>
+                                <div class="user-policy-calendar-tabs"><a class="user-policy-calendar-tab on"
+                                        href="javascript:void(0);" onclick="policyCalendarTabChange(this)">繳費年曆</a><a
+                                        class="user-policy-calendar-tab" href="javascript:void(0);"
+                                        onclick="policyCalendarTabChange(this)">給付年曆</a></div>
                                 <div class="user-policy-calendar-tab-content on">
                                     <div class="user-policy-calendar-years">&nbsp;</div>
                                     <div class="user-policy-calendar-months">
                                         <div class="user-policy-calendar-prev1 user-policy-calendar-arrow"></div>
                                         <div class="user-policy-calendar-next1 user-policy-calendar-arrow"></div>
-                                        <div class="user-policy-calendar-months-slide1"><a class="on" href="javascript:void(0);" id="show-details1"><span>02</span><i>2024</i></a><a href="javascript:void(0);" id="show-details2"><span>03</span></a><a href="javascript:void(0);"><span>04</span></a><a class="highlight" href="javascript:void(0);"><span>05</span></a><a href="javascript:void(0);"><span>06</span></a><a href="javascript:void(0);"><span>07</span></a><a class="highlight" href="javascript:void(0);"><span>08</span></a><a href="javascript:void(0);"><span>09</span></a><a href="javascript:void(0);"><span>10</span></a><a href="javascript:void(0);"><span>11</span></a><a href="javascript:void(0);"><span>12</span></a><a href="javascript:void(0);"><span>01</span><i>2025</i></a></div>
+                                        <div class="user-policy-calendar-months-slide1"><a class="on"
+                                                href="javascript:void(0);"
+                                                id="show-details1"><span>02</span><i>2024</i></a><a
+                                                href="javascript:void(0);" id="show-details2"><span>03</span></a><a
+                                                href="javascript:void(0);"><span>04</span></a><a class="highlight"
+                                                href="javascript:void(0);"><span>05</span></a><a
+                                                href="javascript:void(0);"><span>06</span></a><a
+                                                href="javascript:void(0);"><span>07</span></a><a class="highlight"
+                                                href="javascript:void(0);"><span>08</span></a><a
+                                                href="javascript:void(0);"><span>09</span></a><a
+                                                href="javascript:void(0);"><span>10</span></a><a
+                                                href="javascript:void(0);"><span>11</span></a><a
+                                                href="javascript:void(0);"><span>12</span></a><a
+                                                href="javascript:void(0);"><span>01</span><i>2025</i></a></div>
                                     </div>
                                     <div class="user-policy-calendar">
-                                        <h5 style="height: 80px; background-color: #333; color: #fff; line-height: 5;">這裡是canvus區域</h5>
+                                        <h5 style="height: 80px; background-color: #333; color: #fff; line-height: 5;">
+                                            這裡是canvus區域</h5>
                                     </div>
                                     <div class="user-policy-calendar-details" id="user-policy-calendar-details1">
                                         <div class="user-policy-calendar-detail-info-main">
@@ -281,20 +346,26 @@
                                             </div><a class="button" href="#allmoney1" rel="modal:open">全部幣別總覽</a>
                                         </div>
                                         <div class="user-policy-calendar-detail-info-area-pc">
-                                            <div class="user-policy-calendar-detail-info-prev1 user-policy-calendar-detail-info-arrow"></div>
-                                            <div class="user-policy-calendar-detail-info-next1 user-policy-calendar-detail-info-arrow"></div>
+                                            <div
+                                                class="user-policy-calendar-detail-info-prev1 user-policy-calendar-detail-info-arrow">
+                                            </div>
+                                            <div
+                                                class="user-policy-calendar-detail-info-next1 user-policy-calendar-detail-info-arrow">
+                                            </div>
                                             <div class="user-policy-calendar-detail-info-slide1">
                                                 <div class="user-policy-calendar-detail-info">
                                                     <div class="user-policy-calendar-detail-date">
                                                         <h4 class="text-align-left">01/01<span>( 01/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">利息</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>( 起日: 20230701 )</span>
+                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>(
+                                                                起日: 20230701 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -303,12 +374,14 @@
                                                         <h4 class="text-align-left">01/13<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -317,12 +390,14 @@
                                                         <h4 class="text-align-left">01/19<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -331,12 +406,14 @@
                                                         <h4 class="text-align-left">01/01<span>( 01/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">利息</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>( 起日: 20230701 )</span>
+                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>(
+                                                                起日: 20230701 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -345,12 +422,14 @@
                                                         <h4 class="text-align-left">01/13<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -363,12 +442,14 @@
                                                         <h4 class="text-align-left">01/01<span>( 01/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">利息</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>( 起日: 20230701 )</span>
+                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>(
+                                                                起日: 20230701 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -377,12 +458,14 @@
                                                         <h4 class="text-align-left">01/13<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -391,12 +474,14 @@
                                                         <h4 class="text-align-left">01/19<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -405,12 +490,14 @@
                                                         <h4 class="text-align-left">01/01<span>( 01/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">利息</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>( 起日: 20230701 )</span>
+                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>(
+                                                                起日: 20230701 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -419,12 +506,14 @@
                                                         <h4 class="text-align-left">01/13<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -433,16 +522,19 @@
                                                         <h4 class="text-align-left">01/19<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
-                                            </div><a class="user-policy-calendar-detail-info-area-more" href="javascript:void(0);" onclick="openCalendarDetails(this)"></a>
+                                            </div><a class="user-policy-calendar-detail-info-area-more"
+                                                href="javascript:void(0);" onclick="openCalendarDetails(this)"></a>
                                         </div>
                                     </div>
                                     <div class="user-policy-calendar-details hide" id="user-policy-calendar-details2">
@@ -455,20 +547,26 @@
                                             </div><a class="button" href="#allmoney1" rel="modal:open">全部幣別總覽</a>
                                         </div>
                                         <div class="user-policy-calendar-detail-info-area-pc">
-                                            <div class="user-policy-calendar-detail-info-prev1 user-policy-calendar-detail-info-arrow"></div>
-                                            <div class="user-policy-calendar-detail-info-next1 user-policy-calendar-detail-info-arrow"></div>
+                                            <div
+                                                class="user-policy-calendar-detail-info-prev1 user-policy-calendar-detail-info-arrow">
+                                            </div>
+                                            <div
+                                                class="user-policy-calendar-detail-info-next1 user-policy-calendar-detail-info-arrow">
+                                            </div>
                                             <div class="user-policy-calendar-detail-info-slide1">
                                                 <div class="user-policy-calendar-detail-info">
                                                     <div class="user-policy-calendar-detail-date">
                                                         <h4 class="text-align-left">03/01<span>( 03/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">利息</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>( 起日: 20230701 )</span>
+                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>(
+                                                                起日: 20230701 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -477,12 +575,14 @@
                                                         <h4 class="text-align-left">03/13<span>( 03/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -491,12 +591,14 @@
                                                         <h4 class="text-align-left">03/19<span>( 03/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -505,12 +607,14 @@
                                                         <h4 class="text-align-left">03/01<span>( 03/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">利息</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>( 起日: 20230701 )</span>
+                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>(
+                                                                起日: 20230701 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -519,12 +623,14 @@
                                                         <h4 class="text-align-left">03/13<span>( 03/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -537,12 +643,14 @@
                                                         <h4 class="text-align-left">03/01<span>( 03/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">利息</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>( 起日: 20230701 )</span>
+                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>(
+                                                                起日: 20230701 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -551,12 +659,14 @@
                                                         <h4 class="text-align-left">03/13<span>( 03/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -565,12 +675,14 @@
                                                         <h4 class="text-align-left">03/19<span>( 03/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -579,12 +691,14 @@
                                                         <h4 class="text-align-left">03/01<span>( 03/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">利息</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>( 起日: 20230701 )</span>
+                                                            <div class="color-red">4,269</div><span>台幣</span><br><span>(
+                                                                起日: 20230701 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -593,12 +707,14 @@
                                                         <h4 class="text-align-left">03/13<span>( 03/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">2,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -607,20 +723,25 @@
                                                         <h4 class="text-align-left">03/19<span>( 03/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <div class="text-align-left">保費</div>
                                                         <h4 class="text-align-right">
-                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>( 月繳 )</span>
+                                                            <div class="color-red">1,000</div><span>台幣</span><br><span>(
+                                                                月繳 )</span>
                                                         </h4>
                                                     </div>
                                                 </div>
-                                            </div><a class="user-policy-calendar-detail-info-area-more" href="javascript:void(0);" onclick="openCalendarDetails(this)"></a>
+                                            </div><a class="user-policy-calendar-detail-info-area-more"
+                                                href="javascript:void(0);" onclick="openCalendarDetails(this)"></a>
                                         </div>
                                     </div>
                                     <ul class="user-policy-calendar-note">
-                                        <li><img class="blue-note" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK1SURBVHgB7ZlBctMwFIb/5zAUugpLNq1zguYGmF3psOEEwAkan4D0BE5OQG8AC4Zmh7lBcoK45QBkl27ix1NwpxNbiuXUY6vTfDOZ8bw4jn7pWXr6BezZ87Qh1MT7aB6s4PVB9Abgvjy6K+Fu9vVCYonEEmKeeUjjH2EvRg08SEAQzbuH3rNzZh7gvrG2JAQvTrlzMQlfJ9iRnQSohr+kzhe5HKAGRMjlrkIqCzgb/1E9PkT1Hi9D0gsXP8Ojyyo/qiTg3egmQk29voXR1eAotL3ZSkCWMt/UJRqBp0tO38Zhb1F2pwcLXqATo7HGK6ifdVgppQJU2hDhBM0TZCm7la0pdBbdfGLCV7QJc3gVHo9MXxsFnEZzn6jzSy59tMtiyaue6X0wppDMzUO033jF3ZqjRTsCWe/P4RAyCq90o6Adgaz3neIQnnb90afQuiBzCyY618ULAlRVCTdyP0/39H/bNigISOEFcBRS5XoOjQDqw1FYUw0UBHhEx3AUIipUBAUBDPbhLoUS3rO5ySGsBDwqdAJKa/AWsVmJ2WEBytnYpPgSM83gKMy4zscKAggcw1GksVNNbBNGOoWjpGKI5WPaclq2cn/h3nSaiFvRywf15TTzGI6hXDxdXCvgOVLjHrQtlHOni2sFfFc7H4dGQVmPJtvRuBIfIB3CjUUtMfW+wiggGwXjD5tC5v6tpu/WWmjtx7SZSvLfkxKz18oblWlV+UMBGoQ5nU1Cv3RzZVWNHvDqg6zQTS5w8S04sLmxmr0eXY9gcAdqQ9JGUtfawq+0H1APlpfqs64qrIFF5oNWOn/Y6Yhp7dwp84voI+pAen0p07bNeUCeBx3y3QuBGGHkoxoLOaoa38qqv0vD76jtmFWZTh68QBy0E3nhfQb52DxmlQ9Npbd/q4p3UtMx6549T51/dn3yYuiQPqQAAAAASUVORK5CYII=">表示您有其他幣別項目</li>
+                                        <li><img class="blue-note"
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK1SURBVHgB7ZlBctMwFIb/5zAUugpLNq1zguYGmF3psOEEwAkan4D0BE5OQG8AC4Zmh7lBcoK45QBkl27ix1NwpxNbiuXUY6vTfDOZ8bw4jn7pWXr6BezZ87Qh1MT7aB6s4PVB9Abgvjy6K+Fu9vVCYonEEmKeeUjjH2EvRg08SEAQzbuH3rNzZh7gvrG2JAQvTrlzMQlfJ9iRnQSohr+kzhe5HKAGRMjlrkIqCzgb/1E9PkT1Hi9D0gsXP8Ojyyo/qiTg3egmQk29voXR1eAotL3ZSkCWMt/UJRqBp0tO38Zhb1F2pwcLXqATo7HGK6ifdVgppQJU2hDhBM0TZCm7la0pdBbdfGLCV7QJc3gVHo9MXxsFnEZzn6jzSy59tMtiyaue6X0wppDMzUO033jF3ZqjRTsCWe/P4RAyCq90o6Adgaz3neIQnnb90afQuiBzCyY618ULAlRVCTdyP0/39H/bNigISOEFcBRS5XoOjQDqw1FYUw0UBHhEx3AUIipUBAUBDPbhLoUS3rO5ySGsBDwqdAJKa/AWsVmJ2WEBytnYpPgSM83gKMy4zscKAggcw1GksVNNbBNGOoWjpGKI5WPaclq2cn/h3nSaiFvRywf15TTzGI6hXDxdXCvgOVLjHrQtlHOni2sFfFc7H4dGQVmPJtvRuBIfIB3CjUUtMfW+wiggGwXjD5tC5v6tpu/WWmjtx7SZSvLfkxKz18oblWlV+UMBGoQ5nU1Cv3RzZVWNHvDqg6zQTS5w8S04sLmxmr0eXY9gcAdqQ9JGUtfawq+0H1APlpfqs64qrIFF5oNWOn/Y6Yhp7dwp84voI+pAen0p07bNeUCeBx3y3QuBGGHkoxoLOaoa38qqv0vD76jtmFWZTh68QBy0E3nhfQb52DxmlQ9Npbd/q4p3UtMx6549T51/dn3yYuiQPqQAAAAASUVORK5CYII=">表示您有其他幣別項目
+                                        </li>
                                         <li>
                                             <div class="note full-icon">應繳保費/利息係預估值，實際仍應以應繳當月之保費/利息為主。</div>
                                         </li>
@@ -634,10 +755,23 @@
                                     <div class="user-policy-calendar-months">
                                         <div class="user-policy-calendar-prev2 user-policy-calendar-arrow"></div>
                                         <div class="user-policy-calendar-next2 user-policy-calendar-arrow"></div>
-                                        <div class="user-policy-calendar-months-slide2"><a class="on" href="javascript:void(0);"><span>02</span><i>2024</i></a><a href="javascript:void(0);"><span>03</span></a><a href="javascript:void(0);"><span>04</span></a><a class="highlight" href="javascript:void(0);"><span>05</span></a><a href="javascript:void(0);"><span>06</span></a><a href="javascript:void(0);"><span>07</span></a><a class="highlight" href="javascript:void(0);"><span>08</span></a><a href="javascript:void(0);"><span>09</span></a><a href="javascript:void(0);"><span>10</span></a><a href="javascript:void(0);"><span>11</span></a><a href="javascript:void(0);"><span>12</span></a><a href="javascript:void(0);"><span>01</span><i>2025</i></a></div>
+                                        <div class="user-policy-calendar-months-slide2"><a class="on"
+                                                href="javascript:void(0);"><span>02</span><i>2024</i></a><a
+                                                href="javascript:void(0);"><span>03</span></a><a
+                                                href="javascript:void(0);"><span>04</span></a><a class="highlight"
+                                                href="javascript:void(0);"><span>05</span></a><a
+                                                href="javascript:void(0);"><span>06</span></a><a
+                                                href="javascript:void(0);"><span>07</span></a><a class="highlight"
+                                                href="javascript:void(0);"><span>08</span></a><a
+                                                href="javascript:void(0);"><span>09</span></a><a
+                                                href="javascript:void(0);"><span>10</span></a><a
+                                                href="javascript:void(0);"><span>11</span></a><a
+                                                href="javascript:void(0);"><span>12</span></a><a
+                                                href="javascript:void(0);"><span>01</span><i>2025</i></a></div>
                                     </div>
                                     <div class="user-policy-calendar">
-                                        <h5 style="height: 80px; background-color: #333; color: #fff; line-height: 5;">這裡是canvus區域</h5>
+                                        <h5 style="height: 80px; background-color: #333; color: #fff; line-height: 5;">
+                                            這裡是canvus區域</h5>
                                     </div>
                                     <div class="user-policy-calendar-details">
                                         <div class="user-policy-calendar-detail-info-main">
@@ -649,15 +783,20 @@
                                             </div><a class="button" href="#allmoney2" rel="modal:open">全部幣別總覽</a>
                                         </div>
                                         <div class="user-policy-calendar-detail-info-area-pc">
-                                            <div class="user-policy-calendar-detail-info-prev2 user-policy-calendar-detail-info-arrow"></div>
-                                            <div class="user-policy-calendar-detail-info-next2 user-policy-calendar-detail-info-arrow"></div>
+                                            <div
+                                                class="user-policy-calendar-detail-info-prev2 user-policy-calendar-detail-info-arrow">
+                                            </div>
+                                            <div
+                                                class="user-policy-calendar-detail-info-next2 user-policy-calendar-detail-info-arrow">
+                                            </div>
                                             <div class="user-policy-calendar-detail-info-slide2">
                                                 <div class="user-policy-calendar-detail-info">
                                                     <div class="user-policy-calendar-detail-date">
                                                         <h4 class="text-align-left">01/01<span>( 01/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <br>
@@ -672,7 +811,8 @@
                                                         <h4 class="text-align-left">01/13<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <br>
@@ -687,7 +827,8 @@
                                                         <h4 class="text-align-left">01/19<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <br>
@@ -702,7 +843,8 @@
                                                         <h4 class="text-align-left">01/01<span>( 01/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <br>
@@ -717,7 +859,8 @@
                                                         <h4 class="text-align-left">01/13<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <br>
@@ -736,7 +879,8 @@
                                                         <h4 class="text-align-left">01/01<span>( 01/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <br>
@@ -751,7 +895,8 @@
                                                         <h4 class="text-align-left">01/13<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <br>
@@ -766,7 +911,8 @@
                                                         <h4 class="text-align-left">01/19<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <br>
@@ -781,7 +927,8 @@
                                                         <h4 class="text-align-left">01/01<span>( 01/31寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>AGJ8779000</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>AGJ8779000</span>
                                                             <h5>防癌終身壽險</h5>
                                                         </div>
                                                         <br>
@@ -796,7 +943,8 @@
                                                         <h4 class="text-align-left">01/13<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9005738132</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9005738132</span>
                                                             <h5>新聯鑫變額壽險</h5>
                                                         </div>
                                                         <br>
@@ -811,7 +959,8 @@
                                                         <h4 class="text-align-left">01/19<span>( 02/17寬限 )</span></h4>
                                                     </div>
                                                     <div class="user-policy-calendar-detail-text-area">
-                                                        <div class="user-policy-calendar-detail-text"><span>9002790372</span>
+                                                        <div class="user-policy-calendar-detail-text">
+                                                            <span>9002790372</span>
                                                             <h5>福運多多變額壽險</h5>
                                                         </div>
                                                         <br>
@@ -821,11 +970,14 @@
                                                         </h4>
                                                     </div>
                                                 </div>
-                                            </div><a class="user-policy-calendar-detail-info-area-more" href="javascript:void(0);" onclick="openCalendarDetails(this)"></a>
+                                            </div><a class="user-policy-calendar-detail-info-area-more"
+                                                href="javascript:void(0);" onclick="openCalendarDetails(this)"></a>
                                         </div>
                                     </div>
                                     <ul class="user-policy-calendar-note">
-                                        <li><img class="blue-note" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK1SURBVHgB7ZlBctMwFIb/5zAUugpLNq1zguYGmF3psOEEwAkan4D0BE5OQG8AC4Zmh7lBcoK45QBkl27ix1NwpxNbiuXUY6vTfDOZ8bw4jn7pWXr6BezZ87Qh1MT7aB6s4PVB9Abgvjy6K+Fu9vVCYonEEmKeeUjjH2EvRg08SEAQzbuH3rNzZh7gvrG2JAQvTrlzMQlfJ9iRnQSohr+kzhe5HKAGRMjlrkIqCzgb/1E9PkT1Hi9D0gsXP8Ojyyo/qiTg3egmQk29voXR1eAotL3ZSkCWMt/UJRqBp0tO38Zhb1F2pwcLXqATo7HGK6ifdVgppQJU2hDhBM0TZCm7la0pdBbdfGLCV7QJc3gVHo9MXxsFnEZzn6jzSy59tMtiyaue6X0wppDMzUO033jF3ZqjRTsCWe/P4RAyCq90o6Adgaz3neIQnnb90afQuiBzCyY618ULAlRVCTdyP0/39H/bNigISOEFcBRS5XoOjQDqw1FYUw0UBHhEx3AUIipUBAUBDPbhLoUS3rO5ySGsBDwqdAJKa/AWsVmJ2WEBytnYpPgSM83gKMy4zscKAggcw1GksVNNbBNGOoWjpGKI5WPaclq2cn/h3nSaiFvRywf15TTzGI6hXDxdXCvgOVLjHrQtlHOni2sFfFc7H4dGQVmPJtvRuBIfIB3CjUUtMfW+wiggGwXjD5tC5v6tpu/WWmjtx7SZSvLfkxKz18oblWlV+UMBGoQ5nU1Cv3RzZVWNHvDqg6zQTS5w8S04sLmxmr0eXY9gcAdqQ9JGUtfawq+0H1APlpfqs64qrIFF5oNWOn/Y6Yhp7dwp84voI+pAen0p07bNeUCeBx3y3QuBGGHkoxoLOaoa38qqv0vD76jtmFWZTh68QBy0E3nhfQb52DxmlQ9Npbd/q4p3UtMx6549T51/dn3yYuiQPqQAAAAASUVORK5CYII=">表示您有其他幣別項目</li>
+                                        <li><img class="blue-note"
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK1SURBVHgB7ZlBctMwFIb/5zAUugpLNq1zguYGmF3psOEEwAkan4D0BE5OQG8AC4Zmh7lBcoK45QBkl27ix1NwpxNbiuXUY6vTfDOZ8bw4jn7pWXr6BezZ87Qh1MT7aB6s4PVB9Abgvjy6K+Fu9vVCYonEEmKeeUjjH2EvRg08SEAQzbuH3rNzZh7gvrG2JAQvTrlzMQlfJ9iRnQSohr+kzhe5HKAGRMjlrkIqCzgb/1E9PkT1Hi9D0gsXP8Ojyyo/qiTg3egmQk29voXR1eAotL3ZSkCWMt/UJRqBp0tO38Zhb1F2pwcLXqATo7HGK6ifdVgppQJU2hDhBM0TZCm7la0pdBbdfGLCV7QJc3gVHo9MXxsFnEZzn6jzSy59tMtiyaue6X0wppDMzUO033jF3ZqjRTsCWe/P4RAyCq90o6Adgaz3neIQnnb90afQuiBzCyY618ULAlRVCTdyP0/39H/bNigISOEFcBRS5XoOjQDqw1FYUw0UBHhEx3AUIipUBAUBDPbhLoUS3rO5ySGsBDwqdAJKa/AWsVmJ2WEBytnYpPgSM83gKMy4zscKAggcw1GksVNNbBNGOoWjpGKI5WPaclq2cn/h3nSaiFvRywf15TTzGI6hXDxdXCvgOVLjHrQtlHOni2sFfFc7H4dGQVmPJtvRuBIfIB3CjUUtMfW+wiggGwXjD5tC5v6tpu/WWmjtx7SZSvLfkxKz18oblWlV+UMBGoQ5nU1Cv3RzZVWNHvDqg6zQTS5w8S04sLmxmr0eXY9gcAdqQ9JGUtfawq+0H1APlpfqs64qrIFF5oNWOn/Y6Yhp7dwp84voI+pAen0p07bNeUCeBx3y3QuBGGHkoxoLOaoa38qqv0vD76jtmFWZTh68QBy0E3nhfQb52DxmlQ9Npbd/q4p3UtMx6549T51/dn3yYuiQPqQAAAAASUVORK5CYII=">表示您有其他幣別項目
+                                        </li>
                                         <!--<li>
                                             <div class="note full-icon">應繳保費/利息係預估值，實際仍應以應繳當月之保費/利息為主。</div>
                                         </li>
@@ -835,7 +987,9 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="user-policy-buttons"><a class="button button-red" href="javascript:void(0);">繳費紀錄</a><a class="button button-red" href="javascript:void(0);">滿期│年金│紅利紀錄</a></div>
+                            <div class="user-policy-buttons"><a class="button button-red"
+                                    href="javascript:void(0);">繳費紀錄</a><a class="button button-red"
+                                    href="javascript:void(0);">滿期│年金│紅利紀錄</a></div>
                         </div>
                         <div class="tab-content">
                             <div class="user-policy-filter center flex">
@@ -866,29 +1020,41 @@
                 </div>
                 <div class="policy-description-area section-area">
                     <h4 class="title">保單靈活運用</h4>
-                    <div class="policy-description-tags"><a class="on" href="javascript:void(0);" onclick="policyDescriptionTabChange(this, 1)">保單借款</a><a href="javascript:void(0);" onclick="policyDescriptionTabChange(this, 2)">部分提領</a><a href="javascript:void(0);" onclick="policyDescriptionTabChange(this, 3)">投資型保單</a><a href="javascript:void(0);" onclick="policyDescriptionTabChange(this, 4)">儲蓄型保單</a></div>
+                    <div class="policy-description-tags"><a class="on" href="javascript:void(0);"
+                            onclick="policyDescriptionTabChange(this, 1)">保單借款</a><a href="javascript:void(0);"
+                            onclick="policyDescriptionTabChange(this, 2)">部分提領</a><a href="javascript:void(0);"
+                            onclick="policyDescriptionTabChange(this, 3)">投資型保單</a><a href="javascript:void(0);"
+                            onclick="policyDescriptionTabChange(this, 4)">儲蓄型保單</a></div>
                     <div class="policy-description flex">
-                        <div class="policy-description-use open col"><img class="mb-20" src="images/policy-description-use.png" alt="">
+                        <div class="policy-description-use open col"><img class="mb-20"
+                                src="images/policy-description-use.png" alt="">
                             <div class="flex">
                                 <div class="col on">
                                     <h5 class="policy-description-title">保單借款</h5>
-                                    <div class="policy-description-product-text">多元借款管道服務,使您累積的保單帳戶價值「動起來」,資金運用更加靈活</div><a class="blue-link" href="javascript:void(0);">瞭解如何運用</a>
+                                    <div class="policy-description-product-text">多元借款管道服務,使您累積的保單帳戶價值「動起來」,資金運用更加靈活
+                                    </div><a class="blue-link" href="javascript:void(0);">瞭解如何運用</a>
                                 </div>
                                 <div class="col">
                                     <h5 class="policy-description-title">部分提領</h5>
-                                    <div class="policy-description-product-text">上網就能辦理投資型商品贖回/提領, 既省時又便利~快來立即體驗「網路交易服務」!</div><a class="blue-link" href="javascript:void(0);">瞭解如何運用</a>
+                                    <div class="policy-description-product-text">上網就能辦理投資型商品贖回/提領,
+                                        既省時又便利~快來立即體驗「網路交易服務」!</div><a class="blue-link"
+                                        href="javascript:void(0);">瞭解如何運用</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="policy-description-product col"><img class="mb-20" src="images/policy-description-product.png" alt="">
+                        <div class="policy-description-product col"><img class="mb-20"
+                                src="images/policy-description-product.png" alt="">
                             <div class="flex">
                                 <div class="col">
                                     <h5 class="policy-description-title">投資型保單</h5>
-                                    <div class="policy-description-product-text">兼具「保險保障」與「投資功能」，依個人風險需求選擇標的，保費彈性繳交，資金運用更靈活</div><a class="blue-link" href="javascript:void(0);">看相關商品</a>
+                                    <div class="policy-description-product-text">
+                                        兼具「保險保障」與「投資功能」，依個人風險需求選擇標的，保費彈性繳交，資金運用更靈活</div><a class="blue-link"
+                                        href="javascript:void(0);">看相關商品</a>
                                 </div>
                                 <div class="col">
                                     <h5 class="policy-description-title">儲蓄型保單</h5>
-                                    <div class="policy-description-product-text">保險保障與保單價值一同累積，讓您除身故保障之外，能有額外資金豐富退休生活</div><a class="blue-link" href="javascript:void(0);">看相關商品</a>
+                                    <div class="policy-description-product-text">保險保障與保單價值一同累積，讓您除身故保障之外，能有額外資金豐富退休生活
+                                    </div><a class="blue-link" href="javascript:void(0);">看相關商品</a>
                                 </div>
                             </div>
                         </div>
@@ -964,7 +1130,8 @@
                     <li>
                         <ul class="list-style-dot">
                             <li><a href="javascript:void(0);">扣款失敗如何繳費？</a></li>
-                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link" href="javascript:void(0);">看更多</a>
+                            <li><a href="javascript:void(0);">申請理賠後，我多久可以收到理賠金？</a></li><a class="more blue-link"
+                                href="javascript:void(0);">看更多</a>
                         </ul>
                     </li>
                 </ul>
@@ -1004,7 +1171,10 @@
                 <li><a href="#">主管機關相關連結</a></li>
             </ul>
             <ul class="footer-detail-link">
-                <li><span>客戶服務專線 Tel 0800-031-115&nbsp;<a class="color-dark" href="#" target="_blank">專線操作說明&nbsp;</a>(服務時間：週一至週日08:30~22:00)｜樂齡服務專線(65歲以上)：07-238-9009 ｜海外諮詢(付費電話) +886-2-7736-1122&nbsp;<a class="color-dark" href="#" target="_blank">撥打語音客服</a></span></li>
+                <li><span>客戶服務專線 Tel 0800-031-115&nbsp;<a class="color-dark" href="#"
+                            target="_blank">專線操作說明&nbsp;</a>(服務時間：週一至週日08:30~22:00)｜樂齡服務專線(65歲以上)：07-238-9009
+                        ｜海外諮詢(付費電話) +886-2-7736-1122&nbsp;<a class="color-dark" href="#"
+                            target="_blank">撥打語音客服</a></span></li>
             </ul><span>如果您使用IE8 (含)以下版本瀏覽器，建議您升級您的IE瀏覽器，或使用其他瀏覽器軟體Google Chrome、Firefox，並搭配1024 x 768 以上之螢幕</span>
         </footer>
     </div>
@@ -1158,22 +1328,33 @@
                     <title>新光人壽LINE Business Connect個人化服務使用條款暨個人資料運用告知聲明</title>
                     <p>親愛的客戶您好，感謝您選擇新光人壽保險股份有限公司(以下稱本公司)提供之保險及服務，謹致謝忱。敬請詳閱以下條款：</p>
                     <p><strong>一、身分驗證與服務條款</strong></p>
-                    <p>臺端接受且同意以下服務條款，並使用新光人壽LINE Business Connect個人化服務(以下稱本服務)，本公司將根據臺端提供的身分證字號、手機號碼或其他相關資料進行身分驗證，並於通過身分驗證後與臺端之LINE帳號進行連結綁定，綁定完成即可接收個人化服務通知及使用進階功能等服務。</p>
-                    <p>當臺端同意使用本服務並完成綁定作業後，即可於LINE中接收個人化通知、使用網路保險服務及本公司提供之行銷活動；若須進行保單資料修改服務，則將透過臺端會員資料進行驗證通過後方可進行，以保障臺端的資訊使用安全。</p>
+                    <p>臺端接受且同意以下服務條款，並使用新光人壽LINE Business
+                        Connect個人化服務(以下稱本服務)，本公司將根據臺端提供的身分證字號、手機號碼或其他相關資料進行身分驗證，並於通過身分驗證後與臺端之LINE帳號進行連結綁定，綁定完成即可接收個人化服務通知及使用進階功能等服務。
+                    </p>
+                    <p>當臺端同意使用本服務並完成綁定作業後，即可於LINE中接收個人化通知、使用網路保險服務及本公司提供之行銷活動；若須進行保單資料修改服務，則將透過臺端會員資料進行驗證通過後方可進行，以保障臺端的資訊使用安全。
+                    </p>
                     <p>臺端於通過身分驗證後所為之交易指示，本公司均得認定為臺端本人所為之有效指示，請注意妥善保管臺端的手機及LINE登入帳號及密碼。</p>
                     <p><strong>一、身分驗證與服務條款</strong></p>
-                    <p>臺端接受且同意以下服務條款，並使用新光人壽LINE Business Connect個人化服務(以下稱本服務)，本公司將根據臺端提供的身分證字號、手機號碼或其他相關資料進行身分驗證，並於通過身分驗證後與臺端之LINE帳號進行連結綁定，綁定完成即可接收個人化服務通知及使用進階功能等服務。</p>
-                    <p>當臺端同意使用本服務並完成綁定作業後，即可於LINE中接收個人化通知、使用網路保險服務及本公司提供之行銷活動；若須進行保單資料修改服務，則將透過臺端會員資料進行驗證通過後方可進行，以保障臺端的資訊使用安全。</p>
+                    <p>臺端接受且同意以下服務條款，並使用新光人壽LINE Business
+                        Connect個人化服務(以下稱本服務)，本公司將根據臺端提供的身分證字號、手機號碼或其他相關資料進行身分驗證，並於通過身分驗證後與臺端之LINE帳號進行連結綁定，綁定完成即可接收個人化服務通知及使用進階功能等服務。
+                    </p>
+                    <p>當臺端同意使用本服務並完成綁定作業後，即可於LINE中接收個人化通知、使用網路保險服務及本公司提供之行銷活動；若須進行保單資料修改服務，則將透過臺端會員資料進行驗證通過後方可進行，以保障臺端的資訊使用安全。
+                    </p>
                     <p>臺端於通過身分驗證後所為之交易指示，本公司均得認定為臺端本人所為之有效指示，請注意妥善保管臺端的手機及LINE登入帳號及密碼。</p>
                     <p><strong>一、身分驗證與服務條款</strong></p>
-                    <p>臺端接受且同意以下服務條款，並使用新光人壽LINE Business Connect個人化服務(以下稱本服務)，本公司將根據臺端提供的身分證字號、手機號碼或其他相關資料進行身分驗證，並於通過身分驗證後與臺端之LINE帳號進行連結綁定，綁定完成即可接收個人化服務通知及使用進階功能等服務。</p>
-                    <p>當臺端同意使用本服務並完成綁定作業後，即可於LINE中接收個人化通知、使用網路保險服務及本公司提供之行銷活動；若須進行保單資料修改服務，則將透過臺端會員資料進行驗證通過後方可進行，以保障臺端的資訊使用安全。</p>
+                    <p>臺端接受且同意以下服務條款，並使用新光人壽LINE Business
+                        Connect個人化服務(以下稱本服務)，本公司將根據臺端提供的身分證字號、手機號碼或其他相關資料進行身分驗證，並於通過身分驗證後與臺端之LINE帳號進行連結綁定，綁定完成即可接收個人化服務通知及使用進階功能等服務。
+                    </p>
+                    <p>當臺端同意使用本服務並完成綁定作業後，即可於LINE中接收個人化通知、使用網路保險服務及本公司提供之行銷活動；若須進行保單資料修改服務，則將透過臺端會員資料進行驗證通過後方可進行，以保障臺端的資訊使用安全。
+                    </p>
                     <p>臺端於通過身分驗證後所為之交易指示，本公司均得認定為臺端本人所為之有效指示，請注意妥善保管臺端的手機及LINE登入帳號及密碼。</p>
                 </div>
             </div>
             <div class="clearfix"></div>
-            <a href="javascript:" rel="modal:close" class="sik-btn-button red disabled" id="scrolling-dis">請滑至底部以完成閱讀</a>
-            <a href="javascript:" rel="modal:close" class="sik-btn-button red" style="display: none;" id="scrolling-btn">同意</a>
+            <a href="javascript:" rel="modal:close" class="sik-btn-button red disabled"
+                id="scrolling-dis">請滑至底部以完成閱讀</a>
+            <a href="javascript:" rel="modal:close" class="sik-btn-button red" style="display: none;"
+                id="scrolling-btn">同意</a>
         </div>
     </div>
 </body>
@@ -1181,39 +1362,39 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.modal.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.sidebar-menu-accordion').click(function() {
+    $(document).ready(function () {
+        $('.sidebar-menu-accordion').click(function () {
             $(this).parent().toggleClass('active');
         });
 
-        $('.button.button-red.arrow-bottom').click(function() {
+        $('.button.button-red.arrow-bottom').click(function () {
             $('.user-policy-details-hide').toggleClass('open');
         });
 
-        $('.user-policy-calendar-months-slide1 a, .user-policy-calendar-months-slide2 a').click(function() {
+        $('.user-policy-calendar-months-slide1 a, .user-policy-calendar-months-slide2 a').click(function () {
             $(this).parent().parent().parent().find('a').removeClass('on');
             $(this).addClass('on');
         });
 
         let scrolling = document.getElementById('scrolling');
-        scrolling.addEventListener('scroll', function(e) {
+        scrolling.addEventListener('scroll', function (e) {
             if (this.scrollHeight - this.scrollTop - this.clientHeight <= 0) {
                 $('#scrolling-dis').hide();
                 $('#scrolling-btn').show();
             }
         });
 
-        $('#show-details1').click(function() {
+        $('#show-details1').click(function () {
             $('#user-policy-calendar-details1').removeClass('hide');
             $('#user-policy-calendar-details2').addClass('hide');
         });
 
-        $('#show-details2').click(function() {
+        $('#show-details2').click(function () {
             $('#user-policy-calendar-details2').removeClass('hide');
             $('#user-policy-calendar-details1').addClass('hide');
         });
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             if ($(window).width() < 600) {
                 if ($(window).scrollTop() > 300) {
                     $('.stickybar').removeClass('show');
